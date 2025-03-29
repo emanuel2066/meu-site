@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recarregar - EMATEC</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.recarregar {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .amount-buttons button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body class="recarregar">
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="imge/logo.jpg" alt="Logo do Site">
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <h2>Recarregar Conta</h2>
+    <section class="amount-selection">
+      <p>Selecione um valor:</p>
+      <div class="amount-buttons">
+        <!-- Valores pré-definidos clicáveis -->
+        <button class="amount-btn" data-value="2500">2500 kz</button>
+        <button class="amount-btn" data-value="5000">5000 kz</button>
+        <button class="amount-btn" data-value="10000">10000 kz</button>
+        <button class="amount-btn" data-value="20000">20000 kz</button>
+        <button class="amount-btn" data-value="35000">35000 kz</button>
+        <button class="amount-btn" data-value="1000000">1000000 kz</button>
+      </div>
+      <p>Ou insira outra quantia:</p>
+      <input type="number" id="custom-amount" placeholder="Outro valor">
+    </section>
+    <section class="payment-method">
+      <label for="metodo">Método de pagamento:</label>
+      <select id="metodo">
+        <option value="iban">Iban</option>
+        <option value="Iban">Transferência por expresse</option>
+        <!-- Adicione outros métodos, se necessário -->
+      </select>
+    </section>
+    <div class="recarga-actions">
+      <button onclick="window.location.href='continuar.html'">Continuar</button>
+      <button onclick="window.location.href='usuario.html'">Voltar</button>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

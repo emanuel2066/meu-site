@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retirar - EMATEC</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.retirar {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body class="retirar">
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="imge/logo.jpg" alt="Logo do Site">
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <h2>Retirar Fundos</h2>
+    <section class="withdraw-info">
+      <!-- Imagem ilustrativa (substitua "withdraw.jpg" conforme necessário) -->
+      <img src="imge/Impressora multifuncional HP Officejet Pro 772.png" alt="Imagem de Retirada" style="max-width:200px;">
+      <p>Saldo disponível: <span id="saldo-retirar">100 kz</span></p>
+      <p>Horário de retirada: das 9h até 16h</p>
+      <p>Valor mínimo de retirada: 2000 kz</p>
+    </section>
+    <form id="retirar-form">
+      <label for="valor-retirar">Quantidade a retirar:</label>
+      <input type="number" id="valor-retirar" required>
+      <p id="withdraw-message" class="error"></p>
+      <button type="submit">Continuar</button>
+    </form>
+  </main>
+
+  <script>
+    // Validação do valor de retirada usando JavaScript
+    document.getElementById('retirar-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var amount = parseFloat(document.getElementById('valor-retirar').value);
+      var message = document.getElementById('withdraw-message');
+      if (amount < 2000) {
+        message.textContent = 'Erro: O valor de retirada deve ser de no mínimo 2000 kz.';
+      } else {
+        message.textContent = 'Retirada feita com êxito!';
+      }
+    });
+  </script>
+</body>
+</html>

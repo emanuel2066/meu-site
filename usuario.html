@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Área do Utilizador - EMATEC</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.usuario {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .user-actions button {
+      margin: 10px;
+    }
+    .user-menu a {
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body class="usuario">
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="imge/logo.jpg" alt="Logo do Site">
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="user-info">
+      <h2>Olá!</h2>
+      <!-- Exemplo de contato; normalmente seria dinâmico -->
+      <p>Contacto: 912345678</p>
+      <p>Saldo: <span id="saldo">100 kz</span></p>
+      <div class="user-actions">
+        <!-- Botão Recarregar (redireciona para a página de recarga) -->
+        <button onclick="window.location.href='recarregar.html'">Recarregar</button>
+        <!-- Botão Retirar -->
+        <button onclick="window.location.href='retirar.html'">Retirar</button>
+      </div>
+    </section>
+    <hr>
+    <!-- Menu do Utilizador -->
+
+        <section class="user-menu">
+            <h3>Menu do Utilizador</h3>
+            <nav>
+              <ul>
+                <li><a href="meus-investimentos.html">Meus Investimentos</a></li>
+                <li><a href="contas-bancarias.html">Contas Bancárias</a></li>
+                <li><a href="servico.html">Serviço</a></li>
+                <li><a href="#">Definições</a></li>
+              </ul>
+            </nav>
+          </section>
+     
+        <nav>
+        <ul>
+          <li><a href="meus-investimentos.html">Meus Investimentos</a></li>
+          <li><a href="contas-bancarias.html">Contas Bancárias</a></li>
+          <li><a href="servico.html">Serviço</a></li>
+          <li><a href="#">Definições</a></li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

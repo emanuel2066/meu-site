@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contas Bancárias - EMATEC</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.contas-bancarias {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .info {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="contas-bancarias">
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="imge/logo.jpg" alt="Logo do Site">
+    </div>
+  </header>
+  <main>
+    <h2>Contas Bancárias</h2>
+    <form id="conta-form">
+      <label for="nome-banco">Nome do Banco:</label>
+      <input type="text" id="nome-banco" required>
+
+      <label for="numero-conta">Número do Banco:</label>
+      <input type="text" id="numero-conta" required>
+
+      <label for="nome-completo">Nome Completo do Ordenante:</label>
+      <input type="text" id="nome-completo" required>
+
+      <button type="submit">Salvar</button>
+    </form>
+    <section class="info">
+      <p>Taxa de levantamento: 15%</p>
+      <p>A recolha chegará em 10 a 1 hora sem motivos.</p>
+      <p>Pode levantar dinheiro uma vez por dia.</p>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
