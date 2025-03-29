@@ -24,46 +24,7 @@
   header .logo img {
     height: 40px;
   }
-  /* Estilo para a seção do menu do utilizador */
-.user-menu {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #ffffff; /* Fundo branco para contraste */
-    border: 1px solid #ddd; /* Bordas para destacar */
-    border-radius: 5px; /* Cantos arredondados */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  }
   
-  .user-menu h3 {
-    font-size: 20px;
-    color: #333; /* Cor do texto */
-    margin-bottom: 15px;
-  }
-  
-  .user-menu nav ul {
-    list-style: none; /* Remove os marcadores de lista */
-    padding: 0;
-    display: flex; /* Exibe os itens horizontalmente */
-    flex-wrap: wrap; /* Quebra linha se necessário */
-  }
-  
-  .user-menu nav ul li {
-    margin: 10px 15px; /* Espaço entre os itens */
-  }
-  
-  .user-menu nav ul li a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #007bff; /* Cor azul para os links */
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s; /* Transição suave para hover */
-  }
-  
-  .user-menu nav ul li a:hover {
-    color: #0056b3; /* Cor mais escura ao passar o mouse */
-  }
-  
-
   /* Menu de navegação */
   nav ul {
     list-style: none;
@@ -207,43 +168,5 @@
   
   .user-menu nav ul li a:hover {
     text-decoration: underline;
-  }
-  /* Estilo para a seção do menu do utilizador */
-.user-menu {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #ffffff; /* Fundo branco para contraste */
-    border: 1px solid #ddd; /* Bordas para destacar */
-    border-radius: 5px; /* Cantos arredondados */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  }
-  
-  .user-menu h3 {
-    font-size: 20px;
-    color: #333; /* Cor do texto */
-    margin-bottom: 15px;
-  }
-  
-  .user-menu nav ul {
-    list-style: none; /* Remove os marcadores de lista */
-    padding: 0;
-    display: flex; /* Exibe os itens horizontalmente */
-    flex-wrap: wrap; /* Quebra linha se necessário */
-  }
-  
-  .user-menu nav ul li {
-    margin: 10px 15px; /* Espaço entre os itens */
-  }
-  
-  .user-menu nav ul li a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #007bff; /* Cor azul para os links */
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s; /* Transição suave para hover */
-  }
-  
-  .user-menu nav ul li a:hover {
-    color: #0056b3; /* Cor mais escura ao passar o mouse */
   }
   
