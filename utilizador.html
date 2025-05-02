@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Área do Utilizador - Ematec</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('./img/hp-latex-800-700-printer.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .logo img {
+      width: 120px;
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    .saudacao {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .info-contato, .saldo {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .acoes {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .acoes button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .acoes .recarregar {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .acoes .retirar {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .linha {
+      height: 2px;
+      background-color: white;
+      margin: 20px 0;
+    }
+
+    .menu-usuario ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-usuario li {
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .menu-usuario li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    footer {
+      margin-top: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    footer a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./img/NOVO LOGO.png" alt="Logo Ematec" />
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="saudacao">Olá!</div>
+    <div class="info-contato">Contacto: +244 923 456 789</div>
+    <div class="saldo" id="saldo">Saldo: </div>
+
+
+    <div class="acoes">
+      <button class="recarregar" onclick="location.href='recarregar.html'">Recarregar</button>
+      <button class="retirar" onclick="location.href='retirar.html'">Retirar</button>
+    </div>
+
+    <div class="linha"></div>
+
+    <div class="menu-usuario">
+      <ul>
+        <li><a href="meus_investimentos.html">Meus Investimentos</a></li>
+        <li><a href="contas_bancarias.html">Contas Bancárias</a></li>
+        <li><a href="servico.html">Serviço</a></li>
+        <li><a href="definicoes.html">Definições</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <a href="home.html">Início</a>
+    <a href="investimentos.html">Investimento</a>
+    <a href="equipa.html">Equipa</a>
+    <a href="utilizador.html">Utilizador</a>
+  </footer>
+
+  <script>
+    // Se ainda não tiver saldo no localStorage, define um saldo inicial
+    if (localStorage.getItem("saldo") === null) {
+      localStorage.setItem("saldo", "12000"); // Define o saldo inicial como 12.000 kz
+    }
+  
+    // Atualiza o texto do saldo com o valor atual do localStorage
+    const saldoEl = document.getElementById("saldo");
+    const saldo = parseInt(localStorage.getItem("saldo"));
+    saldoEl.textContent = "Saldo: " + saldo.toLocaleString() + ",00 kz";
+  </script> 
+</body>
+</html>

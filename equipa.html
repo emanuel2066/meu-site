@@ -1,109 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Equipa - EMATEC</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Área da Equipa - Ematec</title>
   <style>
-    body.equipa {
-      background-color: #001f3f;
-      color: #fff;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('/img/hp-latex-800-700-printer.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
     }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .team-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+    .logo img {
+      width: 120px;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .membros {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    .membro {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #fff;
+    }
+
+    .convite {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    .convite button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .convite button:hover {
+      background-color: #0056b3;
+    }
+
+    .tabela-produtos {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin-top: 15px;
     }
-    table, th, td {
-      border: 1px solid #fff;
-    }
+
     th, td {
       padding: 10px;
+      border: 1px solid #333;
       text-align: center;
+    }
+
+    th {
+      background-color: #222;
+      color: white;
+    }
+
+    footer {
+      margin-top: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    footer a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 5px;
     }
   </style>
 </head>
-<body class="equipa">
-  <!-- Cabeçalho -->
+<body>
   <header>
     <div class="logo">
-      <img src="imge/logo.jpg" alt="Logo do Site">
+      <img src="img/NOVO LOGO.png" alt="Logo Ematec" />
     </div>
-    <nav>
-      <ul>
-        <li><a href="home.html">Início</a></li>
-        <li><a href="investimento.html">Investimento</a></li>
-        <li><a href="equipa.html">Equipa</a></li>
-        <li><a href="usuario.html">Utilizador</a></li>
-      </ul>
-    </nav>
   </header>
-
-  <main>
-    <section class="team-info">
-      <h2>Área da Equipa</h2>
-      <p>💎 "Ganhe 10% sobre todo investimento feito por membros indicados por você! </p>
-      <p>Seu link = sua renda passiva. </p>
-      <p>Convida agora e comece a lucrar!"</p>
-      <p>"Seu link é mais que um convite – é a chave para construir riqueza juntos. Cada indicação é um 
-        novo passo rumo à liberdade financeira!"</p>
-        <p>"Quem compartilha oportunidades multiplica ganhos. Seu network vale ouro – use seu link e transforme conexões
-             em renda recorrente!"</p>
-             <p>"O poder da indicação não está só no ganho imediato, mas na rede que você constrói. 
-                Cada membro trazido pelo seu link é um ativo para o seu futuro."</p>
-                <p>"Seu link é sua herança digital. Cada pessoa que entra com seu código escreve
-                     uma parte da sua história de sucesso."</p>
-<p></p>
-      <h2>Dica de Uso: </h2>
-      <p>Use em redes sociais, e-mails ou banners para promover seu programa de afiliados.</p>
-      <p>Inclua dados concretos (ex.: "Já pagamos  50.000 kz em bonificações para indicadores!")</p>
-      <p>Adicione um CTA (Call-to-Action)</p>
-
-    </section>
-    
-      </section>
-<p></p>
-<p></p>
-
-  <section class="products">
-    
-    <!-- Produto nº 1 -->
-    <div class="product-card">
-      <img src="imge/hp-deskjet-2720-.png" alt="Impressora HP Deskjet 5107">
-      <h3>Nível 1</h3>
-      <p>000
-      <h3>Ganhos: 000</h3>
-      <p></p>
-     
-    
-    </div>
-    <div class="product-card">
-        <img src="imge/HP lança o estado da arte em impressora fine art.jpg" alt="Impressora HP Deskjet 5107">
-        <h3>Nível 2</h3>
-        <p>000
-        <h3>Ganhos: 000</h3>
-       
-      </div>
-      <div class="product-card">
-        <img src="imge/impressora a lazer.png" alt="Impressora HP Deskjet 5107">
-        <h3>Nível 3</h3>
-        <p>000
-        <h3>Ganhos: 000</h3>
-        </p>
-       
-       
-      </div>
+  <section class="team-header">
+    <h2>🤝 Área da Equipa</h2>
+    <p>
+      Acompanhe os membros que você convidou, veja seus rendimentos e compartilhe seu link de convite para fazer sua equipa crescer e aumentar seus lucros diariamente.
+    </p>
   </section>
   
-    <!-- Produto nº 1 -->
-   
 
-  <!-- Conteúdo Principal -->
-  
-    <!-- Tabela com detalhes dos produtos -->
-    <section class="product-table">
-      <h3>Detalhes dos Produtos</h3>
+  <div class="content">
+    <div class="membros">
+      <h2>Membros Convidados</h2>
+      <div class="membro">
+        <p>Contacto: +244 923 000 111</p>
+        <p>Renda: 1.500,00 kz</p>
+      </div>
+      <div class="membro">
+        <p>Contacto: +244 923 000 222</p>
+        <p>Renda: 3.000,00 kz</p>
+      </div>
+      <!-- Adicione mais membros aqui conforme necessário -->
+    </div>
+
+    <div class="convite">
+      <h3>Convide mais membros</h3>
+      <p>Link de convite: <span id="link">https://ematec.com/invite?codigo=12345</span>
+        <button onclick="copiarTexto('link')">Copiar Link</button>
+      </p>
+      <p>Código de convite: <span id="codigo">12345</span>
+        <button onclick="copiarTexto('codigo')">Copiar Código</button>
+      </p>
+    </div>
+
+    <div class="tabela-produtos">
+      <h3>Tabela de Produtos</h3>
       <table>
         <thead>
           <tr>
@@ -118,73 +175,55 @@
         <tbody>
           <tr>
             <td>Impressora HP Deskjet 5107</td>
-            <td>2.500,00 kz</td>
-            <td>500,00 kz</td>
-            <td>15.000,00 kz</td>
-            <td>180.000,00 kz</td>
-            <td>12 dias</td>
+            <td>8.000,00 kz</td>
+            <td>700,00  kz</td>
+            <td>21.000,00 kz</td>
+            <td>255.500,00 kz</td>
+            <td>365 dias</td>
           </tr>
           <tr>
-            <td>Impressora Canon PXM</td>
-            <td>5.000,00 kz</td>
-            <td>1.100,00 kz</td>
-            <td>33.000,00 kz</td>
-            <td>396.000,00 kz</td>
-            <td>12 dias</td>
-          </tr>
-          <tr>
-            <td>Impressora Epson</td>
-            <td>12.000,00 kz</td>
-            <td>2.600,00 kz</td>
-            <td>78.000,00 kz</td>
-            <td>936.000,00 kz</td>
-            <td>12 dias</td>
+            <td>Impressora Canon</td>
+            <td>15.000,00  kz</td>
+            <td>990,00 kz</td>
+            <td>29.700,00 kz</td>
+            <td>361.350,00 kz</td>
+            <td>365 dias</td>
           </tr>
           <tr>
             <td>Impressora Epson</td>
-            <td>12.000,00 kz</td>
-            <td>2.600,00 kz</td>
-            <td>78.000,00 kz</td>
-            <td>936.000,00 kz</td>
-            <td>12 dias</td>
+            <td>26.000,00 kz</td>
+            <td>1.300,00 kz</td>
+            <td>39.000 kz</td>
+            <td>474500,00 kz</td>
+            <td>365 dias</td>
           </tr>
           <tr>
-            <td>Impressora Epson</td>
-            <td>12.000,00 kz</td>
-            <td>2.600,00 kz</td>
-            <td>78.000,00 kz</td>
-            <td>936.000,00 kz</td>
-            <td>12 dias</td>
-          </tr>
-          <tr>
-            <td>Impressora Epson</td>
-            <td>12.000,00 kz</td>
-            <td>2.600,00 kz</td>
-            <td>78.000,00 kz</td>
-            <td>936.000,00 kz</td>
-            <td>12 dias</td>
-          </tr>
-          <tr>
-            <td>Impressora Epson</td>
-            <td>12.000,00 kz</td>
-            <td>2.600,00 kz</td>
-            <td>78.000,00 kz</td>
-            <td>936.000,00 kz</td>
-            <td>12 dias</td>
+            <td>Impressora HP Bulk ink pro</td>
+            <td>35.000,00kz</td>
+            <td> 1.990,00 kz</td>
+            <td>59.700,00kz</td>
+            <td>726.350,00 kz</td>
+            <td>365 dias</td>
           </tr>
         </tbody>
       </table>
-    </section>
-  </main>
+    </div>
+  </div>
 
-  <!-- Rodapé -->
   <footer>
-    <nav>
-      <ul>
-        <h5>Invista com segurança</h5>
-      </ul>
-    </nav>
+    <a href="home.html">Início</a>
+    <a href="investimentos.html">Investimento</a>
+    <a href="equipa.html">Equipa</a>
+    <a href="utilizador.html">Utilizador</a>
   </footer>
-  <script src="main.js"></script>
+
+  <script>
+    function copiarTexto(id) {
+      const texto = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(texto).then(() => {
+        alert("Copiado: " + texto);
+      });
+    }
+  </script>
 </body>
 </html>

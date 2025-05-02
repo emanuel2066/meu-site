@@ -2,57 +2,131 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Retirar - EMATEC</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirar - Ematec</title>
   <style>
-    body.retirar {
-      background-color: #f4f4f4;
-      color: #333;
+    body {
+      font-family: Arial, sans-serif;
+      background: url('/img/282a6190869adcc468dc6c1365a6a37d.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      color: white;
     }
-    .error {
-      color: red;
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: 50px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      margin-bottom: 15px;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .saldo {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .mensagem {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
     }
   </style>
 </head>
-<body class="retirar">
-  <!-- Cabeçalho -->
-  <header>
-    <div class="logo">
-      <img src="imge/logo.jpg" alt="Logo do Site">
-    </div>
-  </header>
+<body>
+  <div class="container">
+    <h2>Solicitar Retirada</h2>
 
-  <!-- Conteúdo Principal -->
-  <main>
-    <h2>Retirar Fundos</h2>
-    <section class="withdraw-info">
-      <!-- Imagem ilustrativa (substitua "withdraw.jpg" conforme necessário) -->
-      <img src="imge/Impressora multifuncional HP Officejet Pro 772.png" alt="Imagem de Retirada" style="max-width:200px;">
-      <p>Saldo disponível: <span id="saldo-retirar">100 kz</span></p>
-      <p>Horário de retirada: das 9h até 16h</p>
-      <p>Valor mínimo de retirada: 2000 kz</p>
-    </section>
-    <form id="retirar-form">
-      <label for="valor-retirar">Quantidade a retirar:</label>
-      <input type="number" id="valor-retirar" required>
-      <p id="withdraw-message" class="error"></p>
-      <button type="submit">Continuar</button>
-    </form>
-  </main>
+    <img src="/img/impressora a lazer.png" alt="Retirada" />
+
+    <div class="info">
+      <p>🕘 Horário de retirada: das <strong>9h até 16h</strong>.</p>
+      <p>💰 Valor mínimo de retirada: <strong>2.000 Kz</strong>.</p>
+    </div>
+
+    <div class="saldo" id="saldo">Saldo disponível: <strong>12.000 Kz</strong></div>
+
+    <input type="number" id="valor" placeholder="Insira o valor a retirar" />
+
+    <button onclick="retirar()">Continuar</button>
+
+    <div id="mensagem" class="mensagem"></div>
+  </div>
 
   <script>
-    // Validação do valor de retirada usando JavaScript
-    document.getElementById('retirar-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var amount = parseFloat(document.getElementById('valor-retirar').value);
-      var message = document.getElementById('withdraw-message');
-      if (amount < 2000) {
-        message.textContent = 'Erro: O valor de retirada deve ser de no mínimo 2000 kz.';
-      } else {
-        message.textContent = 'Retirada feita com êxito!';
+   // Define saldo inicial apenas se não existir ainda
+if (localStorage.getItem("saldo") === null) {
+  localStorage.setItem("saldo", "30000");
+}
+// Simulação de saldo disponível
+
+    function retirar() {
+      const valor = parseInt(document.getElementById("valor").value);
+      const mensagem = document.getElementById("mensagem");
+
+      if (isNaN(valor)) {
+        mensagem.style.color = "yellow";
+        mensagem.innerText = "⚠️ Insira um valor válido.";
+        return;
       }
-    });
+
+      if (valor < 2000) {
+        mensagem.style.color = "red";
+        mensagem.innerText = "Erro: o valor mínimo de retirada é 2.000 Kz.";
+      } else if (valor > saldo) {
+        mensagem.style.color = "red";
+        mensagem.innerText = "Erro: saldo insuficiente.";
+      } else {
+        saldo -= valor;
+        document.getElementById("saldo").innerHTML = "Saldo disponível: <strong>" + saldo + " Kz</strong>";
+        mensagem.style.color = "lightgreen";
+        mensagem.innerText = "✅ Levantamento feito com êxito!";
+      }
+    }
   </script>
 </body>
 </html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investimentos - Ematec</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('/img/hp\ 2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; /* ou o que preferir */
+  background-color: rgb(48, 46, 46); /* Ou transparente, dependendo do fundo */
+  z-index: 1000; /* Fica acima de tudo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      width: 120px;
+    }
+
+    .content {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .intro {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    .produto {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: black;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .produto img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .detalhes {
+      flex: 1;
+      text-align: left;
+  
+    }
+
+    .detalhes h3 {
+      margin-top: 0;
+    }
+
+    .comprar-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .comprar-btn:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    footer a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+    }
+    .invest-desc {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/img/NOVO LOGO.png" alt="Logo Ematec" />
+    </div>
+  </header>
+
+  <section class="invest-desc">
+    <h2>📊 Área de Investimentos</h2>
+    <p>
+      Invista em produtos que oferecem rendimento diário durante um ciclo definido. Selecione uma das opções abaixo e comece a ganhar todos os dias com segurança e praticidade.
+  </p>
+</section>
+    </p>
+  </section>
+  
+
+    <!-- Produto 1 -->
+    <div class="produto">
+      <img src="/img/hp-deskjet-2720-.png" alt="Impressora HP Deskjet 5107">
+      <div class="detalhes">
+        <h3>Impressora HP Deskjet 5107</h3>
+        <p>Preço: 8.000 kz</p>
+        <p>Ciclo: 25 dias</p>
+        <p>Renda Diária: 700,00 kz</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="produto">
+      <img src="/img/canon.jpg" alt="Impressora Canon PXM">
+      <div class="detalhes">
+        <h3>Impressora Canon PXM</h3>
+        <p>Preço: 15.000,00 kz</p>
+        <p>Renda Diária: 990,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="produto">
+      <img src="/img/impressora a lazer.png" alt="Impressora a lazer">
+      <div class="detalhes">
+        <h3>Impressora Epson</h3>
+        <p>Preço: 26.000,00 kz</p>
+        <p>Renda Diária: 1.300,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+    
+    <!-- Produto 4 -->
+    <div class="produto">
+      <img src="/img/hp 2.jpg" alt="Impressora HP Bulk ink">
+      <div class="detalhes">
+        <h3>Impressora HP Bulk ink pro</h3>
+        <p>Preço: 35.000,00 kz</p>
+        <p>Renda Diária: 1.990,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+    
+    <!-- Produto 5 -->
+    <div class="produto">
+      <img src="/img/epson.jpg" alt="Impressora Epson">
+      <div class="detalhes">
+        <h3>Impressora Epson</h3>
+        <p>Preço: 55.000,00 kz</p>
+        <p>Renda Diária: 2000,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+    
+    <!-- Produto 6 -->
+    <div class="produto">
+      <img src="/img/Multifuncional HP Officejet 7612 e-All-in-One.jpg" alt="Impressora Officejet 7612">
+      <div class="detalhes">
+        <h3>Impressora HP Officejet e-All-in-One</h3>
+        <p>Preço: 88.000,00 kz</p>
+        <p>Renda Diária: 4.500,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+    <!-- Produto 7 -->
+    <div class="produto">
+      <img src="/img/Impressora multifuncional HP Officejet Pro 772.png" alt="Impressora Officejet pro">
+      <div class="detalhes">
+        <h3>Impressora HP Officejet Pro 772</h3>
+        <p>Preço: 1100.000,00 kz</p>
+        <p>Renda Diária: 8.500,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+    <!-- Produto 8 -->
+    <div class="produto">
+      <img src="/img/HP lança o estado da arte em impressora fine art.jpg" alt="Impressora HP fine art">
+      <div class="detalhes">
+        <h3>Impressora Fine art</h3>
+        <p>Preço: 120.000,00 kz</p>
+        <p>Renda Diária: 12.000,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+    <!-- Produto 9 -->
+    <div class="produto">
+      <img src="/img/hp-latex-800-700-printer.jpg" alt="Impressora HP hp-latex-800-700-printer">
+      <div class="detalhes">
+        <h3>Impressora HP hp-latex-800-700-printer</h3>
+        <p>Preço: 180.000,00 kz</p>
+        <p>Renda Diária: 18.500,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+
+    <!-- Produto 10 -->
+    <div class="produto">
+      <img src="/img/Impressora Digital Grande Formato Hp 9000s.jpg" alt="Impressora HP Digital Grande Formato">
+      <div class="detalhes">
+        <h3>Impressora HP digital Grande Formato</h3>
+        <p>Preço: 2500.000,00 kz</p>
+        <p>Renda Diária: 25.600,00 kz</p>
+        <p>Ciclo: 365 dias</p>
+        <p>Taxa: 12%</p>
+      </div>
+      <button class="comprar-btn">Comprar</button>
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="home.html">Início</a>
+    <a href="investimentos.html">Investimento</a>
+    <a href="equipa.html">Equipa</a>
+    <a href="utilizador.html">Utilizador</a>
+  </footer>
+  
+</body>
+</html>

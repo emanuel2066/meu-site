@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contas Bancárias - Ematec</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('img/fundo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      color: white;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      margin-bottom: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .mensagem {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .mensagem.success {
+      color: lightgreen;
+    }
+
+    .mensagem.error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Adicionar Conta Bancária</h2>
+
+    <div class="info">
+      <p>1. Taxa de levantamento: <strong>15%</strong></p>
+      <p>2. A recolha chega entre <strong>10min a 1 hora</strong>.</p>
+      <p>3. Pode levantar dinheiro uma vez por dia.</p>
+    </div>
+
+    <form id="form-conta">
+      <input class="form-input" type="text" id="banco" placeholder="Nome do Banco" required />
+      <input class="form-input" type="text" id="numeroConta" placeholder="Número da Conta" required />
+      <input class="form-input" type="text" id="nomeOrdenante" placeholder="Nome Completo do Ordenante" required />
+
+      <button type="submit">Adicionar Conta</button>
+    </form>
+
+    <div id="mensagem" class="mensagem"></div>
+
+    <button onclick="window.location.href='utilizador.html'">Voltar</button>
+  </div>
+
+  <script>
+    document.getElementById("form-conta").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const banco = document.getElementById("banco").value;
+      const numeroConta = document.getElementById("numeroConta").value;
+      const nomeOrdenante = document.getElementById("nomeOrdenante").value;
+      const mensagem = document.getElementById("mensagem");
+
+      if (banco && numeroConta && nomeOrdenante) {
+        mensagem.className = "mensagem success";
+        mensagem.innerText = "✅ Conta bancária adicionada com sucesso!";
+      } else {
+        mensagem.className = "mensagem error";
+        mensagem.innerText = "⚠️ Todos os campos são obrigatórios.";
+      }
+    });
+  </script>
+</body>
+</html>

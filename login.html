@@ -1,51 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login - EMATEC</title>
-  <!-- Link para a folha de estilo -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Ematec</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('/img/hp-deskjet-2720-.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .logo img {
+      width: 120px;
+    }
+
+    .lang-select {
+      background: white;
+      color: black;
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      width: 300px;
+      margin: 100px auto;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      border: none;
+      padding: 10px;
+      color: white;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      color: #00ffff;
+      display: block;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <!-- Cabeçalho com logo -->
   <header>
     <div class="logo">
-      <!-- Substitua "logo.png" pela imagem do logo -->
-      <img src="imge/logo.jpg" alt="Logo do Site">
+      <img src="/img/NOVO LOGO.png" alt="Logo Ematec" />
     </div>
-    <!-- (Opcional) Menu de navegação simples pode ser adicionado aqui -->
+    <select class="lang-select">
+      <option value="pt">PT</option>
+      <option value="en">EN</option>
+      <option value="en">FR</option>
+      <option value="en">SP</option>
+    </select>
   </header>
 
-  <!-- Corpo Principal com formulário de login -->
-  <main>
-    <form id="login-form">
-      <h2>Login</h2>
-      <!-- Campo para CONTACTO -->
-      <label for="contacto">Contacto:</label>
-      <input type="text" id="contacto" name="contacto" placeholder="Insira o seu contacto" required>
-
-      <!-- Campo para senha -->
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" placeholder="Insira a sua senha" required>
-
-      <!-- Botão Entrar -->
-      <button type="submit">Entrar</button>
-
-      <!-- Link Esqueci a senha -->
-      <a href="#" class="link">Esqueci a senha</a>
-
-      <!-- Link para cadastro caso o usuário não possua conta -->
-      <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="home.html">
+      <input type="text" placeholder="Contacto" required />
+      <input type="password" placeholder="Senha" required />
+      <button type="submit">Login</button>
     </form>
-  </main>
-
-  <!-- Rodapé com links para termos -->
-  <footer>
-    <a href="#">Termos de Serviço</a> | <a href="#">Política de Privacidade</a>
-  </footer>
-
-  <!-- Inclusão do arquivo JavaScript -->
-  <script src="main.js"></script>
+    <a href="#">Esqueci a senha</a>
+    <a href="cadastro.html">Faça login aqui</a>
+  </div>
 </body>
 </html>

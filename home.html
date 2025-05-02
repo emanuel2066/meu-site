@@ -1,82 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página Inicial - EMATEC</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ematec - Início</title>
   <style>
-    /* Classe específica para a home com fundo azul escuro e letras brancas */
-    body.home {
-      background-color: #001f3f;
-      color: #fff;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('/img/282a6190869adcc468dc6c1365a6a37d.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .logo img {
+      width: 120px;
+    }
+
+    .banner {
+      text-align: center;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .banner h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 18px;
+    }
+
+    .carrossel {
+      width: 80%;
+      height: 300px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 3px solid white;
+    }
+
+    .carrossel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .carrossel img.active {
+      display: block;
+    }
+
+    .info {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.info h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.info ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.info li {
+  margin-bottom: 10px;
+}
+
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    footer a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 5px;
     }
   </style>
 </head>
-<body class="home">
-  <!-- Cabeçalho com logo e menu de navegação -->
+<body>
   <header>
     <div class="logo">
-      <img src="imge/logo.jpg" alt="Logo do Site">
+      <img src="/img/NOVO LOGO.png" alt="Logo Ematec">
     </div>
-    <nav>
-      <ul>
-        <li><a href="home.html">🏡Início</a></li>
-        <li><a href="investimento.html">Investimento</a></li>
-        <li><a href="equipa.html">Equipa</a></li>
-        <li><a href="usuario.html">Utilizador</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Conteúdo principal com informações do projeto -->
-  <main>
-    <section class="project-info">
-      <h1>Invista com segurança</h1>
-      <p>"Na Ortiga, transformamos seu dinheiro em oportunidades.
-         Com assessoria especializada, produtos diversificados e transparência, ajudamos você a
-          investir com confiança
-         e alcançar seus objetivos financeiros. Conheça nossas soluções e invista no seu futuro!".</p>
-        <p></p>
-        <h2>Nossas soluções</h2>
-       <p>  Assessoria em Investimentos – Planejamento estratégico para indivíduos e empresas.</p>
-       <p>Fundos Exclusivos – Carteiras diversificadas com gestão ativa.</p>
-       <p>Renda Fixa e Variável – Opções para todos os níveis de risco.</p>
-       <p>Previdência Privada – Planejamento para aposentadoria com vantagens fiscais.</p>
-       <p>Investimentos Globais – Acesso a oportunidades internacionais.</p>
+  <div class="banner">
+    <h1>Bem-vindo à Ematec</h1>
+    <p>Comece a explorar agora mesmo.</p>
+  </div>
 
-       <h2>Compromisso com o cliente</h2>
-       <p>Na Ortiga, seu patrimônio é tratado com a mesma dedicação que o nosso.
-         Combinamos conhecimento técnico, inovação e um olhar 
-        individualizado para transformar seus recursos em crescimento consistente.</p>
-        <p>💡 Invista com quem pensa no seu futuro. Agende uma consultoria e descubra o melhor caminho para seus objetivos!</p>
+  <div class="carrossel">
+    <img src="/img/HP lança o estado da arte em impressora fine art.jpg" class="active" alt="Imagem 1">
+    <img src="/img/hp 2.jpg" alt="Imagem 2">
+    <img src="/img/impressora a lazer.png" alt="Imagem 3">
+    <img src="/img/282a6190869adcc468dc6c1365a6a37d.jpg" alt="Imagem 3">
+  </div>
 
-
-    </section>
-
-    <!-- Carousel de imagens que troca a cada poucos segundos -->
-    <section class="carousel">
-    
-      <img src="imge/canon.jpg" alt="Produto 2" class="carousel-img">
-      <img src="imge/epson.jpg" alt="Produto 3" class="carousel-img">
-    </section>
-
-    <section class="project-info">
-        <h3>Invista com segurança</h3>
-        <p>A EMATEC é uma empresa com destaque no mundo da tecnologia que fornece produtos e serviços de alta qualidade.</p>
-      </section>
-
-  </main>
-
-  <!-- Rodapé com links para navegação -->
+  <section class="info">
+    <h2>Sobre a Ematec</h2>
+    <p>
+      A <strong>Ematec</strong> é uma plataforma digital de investimentos criada para ajudar os angolanos a alcançarem independência financeira.
+      Aqui, você investe em produtos reais que geram <strong>lucros diários</strong> de forma simples, segura e totalmente online.
+    </p>
+    <p>
+      Cada produto oferece um ciclo com rendimento fixo, e você acompanha seus investimentos diretamente no seu painel.
+      Nossa missão é oferecer <strong>transparência, praticidade e resultados reais</strong> para todos os nossos usuários.
+    </p>
+    <ul>
+      <li>📈 Investimentos com retorno diário.</li>
+      <li>🔒 Segurança e transparência em cada operação.</li>
+      <li>👥 Sistema de equipe e convite para ganhos extras.</li>
+      <li>📱 Suporte via WhatsApp e Telegram.</li>
+    </ul>
+  </section>
+  
   <footer>
-    <nav>
-      <ul>
-
-         <h4>Invista com segurança</h4>
-      </ul>
-    </nav>
+    <a href="home.html">Início</a>
+    <a href="investimentos.html">Investimento</a>
+    <a href="equipa.html">Equipa</a>
+    <a href="utilizador.html">Utilizador</a>
   </footer>
-  <script src="main.js"></script>
+
+  <script>
+    // Carrossel automático
+    const imagens = document.querySelectorAll('.carrossel img');
+    let index = 0;
+
+    setInterval(() => {
+      imagens[index].classList.remove('active');
+      index = (index + 1) % imagens.length;
+      imagens[index].classList.add('active');
+    }, 3000);
+    
+  </script>
 </body>
 </html>

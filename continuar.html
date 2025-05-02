@@ -1,57 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Continuar - Recarregar - EMATEC</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento - Ematec</title>
   <style>
-    body.continuar {
-      background-color: #f4f4f4;
-      color: #333;
+    body {
+      font-family: Arial, sans-serif;
+      background: url('img/fundo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      margin: 0;
     }
-    .bank-card {
-      border: 1px solid #ccc;
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .conta {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .conta p {
+      margin: 5px 0;
+    }
+
+    .copiar-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"], input[type="file"] {
+      width: 100%;
       padding: 10px;
-      margin: 10px 0;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button.enviar {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
     }
   </style>
 </head>
-<body class="continuar">
-  <!-- Cabeçalho -->
-  <header>
-    <div class="logo">
-      <img src="imge/logo.jpg" alt="Logo do Site">
-    </div>
-  </header>
+<body>
+  <div class="container">
+    <h2>Informações de Pagamento</h2>
 
-  <!-- Conteúdo Principal -->
-  <main>
-    <h2>Escolha um Banco</h2>
-    <!-- Lista de Bancos com informações -->
-    <section class="banks">
-      <!-- Banco 1 -->
-      <div class="bank-card">
-        <p><strong>Número da Conta:</strong> 1234567890</p>
-        <p><strong>Nome do Proprietário:</strong> João Silva</p>
-        <label for="ordenante1">Nome do Ordenante:</label>
-        <input type="text" id="ordenante1" placeholder="Digite o nome do ordenante">
-        <label for="comprovativo1">Comprovativo:</label>
-        <input type="file" id="comprovativo1" accept="image/*">
-      </div>
-      <!-- Banco 2 -->
-      <div class="bank-card">
-        <p><strong>Número da Conta:</strong> 0987654321</p>
-        <p><strong>Nome do Proprietário:</strong> Maria Fernandes</p>
-        <label for="ordenante2">Nome do Ordenante:</label>
-        <input type="text" id="ordenante2" placeholder="Digite o nome do ordenante">
-        <label for="comprovativo2">Comprovativo:</label>
-        <input type="file" id="comprovativo2" accept="image/*">
-      </div>
-    </section>
-    <button onclick="alert('Recarga em processamento')">Confirmar</button>
-    <button onclick="window.location.href='recarregar.html'">Voltar</button>
-  </main>
-  <script src="main.js"></script>
+    <!-- Conta bancária 1 -->
+    <div class="conta">
+      <p><strong>Banco:</strong> BAI</p>
+      <p><strong>Nº da Conta:</strong> 00123456789</p>
+      <p><strong>Nome do Proprietário:</strong> João Silva</p>
+      <p><strong>IBAN:</strong> AO06000400000000123456789</p>
+      <button class="copiar-btn" onclick="copiarIBAN('AO06000400000000123456789')">Copiar IBAN</button>
+    </div>
+
+    <!-- Conta bancária 2 -->
+    <div class="conta">
+      <p><strong>Banco:</strong> Millennium Atlântico</p>
+      <p><strong>Nº da Conta:</strong> 00234567891</p>
+      <p><strong>Nome do Proprietário:</strong> Maria Lopes</p>
+      <p><strong>IBAN:</strong> AO06000500000000234567891</p>
+      <button class="copiar-btn" onclick="copiarIBAN('AO06000500000000234567891')">Copiar IBAN</button>
+    </div>
+
+    <label for="ordenante">Nome do Ordenante:</label>
+    <input type="text" id="ordenante" placeholder="Digite o seu nome completo"/>
+
+    <label for="comprovativo">Carregar Comprovativo de Pagamento:</label>
+    <input type="file" id="comprovativo" accept="image/*,application/pdf"/>
+
+    <button class="enviar" onclick="enviarComprovativo()">Enviar Comprovativo</button>
+  </div>
+
+  <script>
+    function copiarIBAN(iban) {
+      navigator.clipboard.writeText(iban).then(() => {
+        alert("IBAN copiado: " + iban);
+      });
+    }
+
+    function enviarComprovativo() {
+      const nome = document.getElementById("ordenante").value;
+      const comprovativo = document.getElementById("comprovativo").files[0];
+
+      if (!nome || !comprovativo) {
+        alert("Por favor, preencha todos os campos e carregue o comprovativo.");
+        return;
+      }
+
+      alert("Comprovativo enviado com sucesso!");
+      // Aqui você pode adicionar o envio para backend futuramente
+    }
+  </script>
 </body>
 </html>
